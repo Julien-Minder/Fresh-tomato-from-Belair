@@ -1,0 +1,17 @@
+{
+  "name": "Fresh-tomato-from-Belair",
+  "version": "1.0.0",
+  "description": "Pomodoro Becode exercise with React.",
+  "private": true,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julien-Minder/Fresh-tomato-from-Belair.git"
+  },
+  "author": "Julien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Julien-Minder/Fresh-tomato-from-Belair/issues"
+  },
+  "homepage": "https://github.com/Julien-Minder/Fresh-tomato-from-Belair#readme"
+}
