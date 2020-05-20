@@ -1,8 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 
-const Pomodoro = () => (
-    <div>
-        <p>{"hello Guys !!! "}</p>
-    </div>
-);
+import {SESSION_DURATION} from "../core/const";
+
+const Pomodoro = () => {
+    const [timer] = useState(SESSION_DURATION);
+    return (
+        <div>
+            <p>{`hello Guys !!! (${timer}) `}</p>
+        </div>
+    );
+};
 export default Pomodoro;
