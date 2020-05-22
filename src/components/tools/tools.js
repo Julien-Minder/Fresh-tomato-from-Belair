@@ -41,3 +41,5 @@ Tools.propTypes = {
     onPlus: PropTypes.func.isRequired,
     onMinus: PropTypes.func.isRequired,
 };
+
+export default Tools;

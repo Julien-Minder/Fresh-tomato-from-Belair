@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useCallback} from "react";
 
 import {SESSION_DURATION} from "../core/const";
 import Display from "./display/display";
@@ -8,23 +8,32 @@ const Pomodoro = () => {
     const [timer, setTimer] = useState(SESSION_DURATION);
     const [running] = useState(false);
 
-    const handleMinus = () => console.warn("handleMinus");
-    const handlePlus = () => console.warn("handlePlus");
-    const handleStartPause = () => console.warn("handleStartPause");
-    const handlereset = () => setTimer(SESSION_DURATION);
+    const handleMinus = useCallback(
+        () => setTimer(timer < 60 ? 0 : timer - 60),
+        [timer, setTimer],
+    );
+    const handlePlus = useCallback(() => setTimer(timer + 60), [
+        timer,
+        setTimer,
+    ]);
+    const handleStartPause = useCallback(() =>
+        console.warn("handleStartPause"),
+    );
+    const handleReset = useCallback(() => setTimer(SESSION_DURATION), [
+        setTimer,
+    ]);
 
     return (
         <div>
-            <div>
-                <Display seconds={timer} running={running} />
-                <Tools
-                    running={running}
-                    onMinus={handleMinus}
-                    onPlus={handlePlus}
-                    onStartPause={handleStartPause}
-                    onReset={handlereset}
-                />
-            </div>
+            <Display seconds={timer} />
+
+            <Tools
+                running={running}
+                onMinus={handleMinus}
+                onPlus={handlePlus}
+                onStartPause={handleStartPause}
+                onReset={handleReset}
+            />
         </div>
     );
 };
