@@ -24,16 +24,18 @@ const Pomodoro = () => {
     ]);
 
     return (
-        <div>
-            <Display seconds={timer} />
+        <div className={["columns", "is-mobile", "is-centered"].join(" ")}>
+            <div className={["column", "is-half"].join(" ")}>
+                <Display seconds={timer} />
 
-            <Tools
-                running={running}
-                onMinus={handleMinus}
-                onPlus={handlePlus}
-                onStartPause={handleStartPause}
-                onReset={handleReset}
-            />
+                <Tools
+                    running={running}
+                    onMinus={handleMinus}
+                    onPlus={handlePlus}
+                    onStartPause={handleStartPause}
+                    onReset={handleReset}
+                />
+            </div>
         </div>
     );
 };
