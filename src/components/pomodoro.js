@@ -1,12 +1,14 @@
 import React, {useState} from "react";
 
 import {SESSION_DURATION} from "../core/const";
+import Display from "./display/display";
 
 const Pomodoro = () => {
     const [timer] = useState(SESSION_DURATION);
+    const [running] = useState(false);
     return (
         <div>
-            <p>{`hello Guys !!! (${timer}) `}</p>
+            <Display seconds={timer} running={running} />
         </div>
     );
 };
