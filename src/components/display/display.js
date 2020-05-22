@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import Cyphers from "./cyphers";
 
-//const styles = { fonSize: "10rem", textAlign: "center", }
+const styles = {fontSize: "10rem", textAlign: "center"};
 
 const Display = ({seconds, running = false}) => {
     let separator = ":";
@@ -12,7 +12,7 @@ const Display = ({seconds, running = false}) => {
     }
 
     return (
-        <div>
+        <div style={styles}>
             <Cyphers value={Math.floor(seconds / 60)} />
             <span>{separator}</span>
             <Cyphers value={seconds % 60} />
