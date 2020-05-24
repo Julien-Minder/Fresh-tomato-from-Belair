@@ -1,12 +1,17 @@
-import React, {useState, useCallback} from "react";
+import React, {/*useState, */ useCallback} from "react";
 
 import {SESSION_DURATION} from "../core/const";
 import Display from "./display/display";
 import Tools from "./tools/tools";
+import useTimer from "../core/hooks/use-timer";
 
 const Pomodoro = () => {
-    const [timer, setTimer] = useState(SESSION_DURATION);
-    const [running] = useState(false);
+    const [{timer, running}, {setTimer, setRunning}] = useTimer(
+        SESSION_DURATION,
+    );
+
+    /* const [timer, setTimer] = useState(SESSION_DURATION);
+     const [running] = useState(false);*/
 
     const handleMinus = useCallback(
         () => setTimer(timer < 60 ? 0 : timer - 60),
@@ -16,9 +21,10 @@ const Pomodoro = () => {
         timer,
         setTimer,
     ]);
-    const handleStartPause = useCallback(() =>
-        console.warn("handleStartPause"),
-    );
+    const handleStartPause = useCallback(() => setRunning(!running), [
+        running,
+        setRunning,
+    ]);
     const handleReset = useCallback(() => setTimer(SESSION_DURATION), [
         setTimer,
     ]);
@@ -26,7 +32,7 @@ const Pomodoro = () => {
     return (
         <div className={["columns", "is-mobile", "is-centered"].join(" ")}>
             <div className={["column", "is-half"].join(" ")}>
-                <Display seconds={timer} />
+                <Display timer={timer} />
 
                 <Tools
                     running={running}
