@@ -16,15 +16,17 @@
 
 ### 🏠 [Homepage](https://github.com/Julien-Minder/Fresh-tomato-from-Belair#readme)
 
+### ✨ [Demo](https://quizzical-morse-15fb41.netlify.app/)
+
 ## Author
 
-👤 **Julien M.**
+👤 **Julien Minder**
 
 * Github: [@Julien-Minder](https://github.com/Julien-Minder)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Julien-Minder/Fresh-tomato-from-Belair/issues). You can also take a look at the [contributing guide](https://github.com/Julien-Minder/Fresh-tomato-from-Belair/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Julien-Minder/Fresh-tomato-from-Belair/issues). 
 
 ## Show your support
 
@@ -32,7 +34,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2020 [Julien M.](https://github.com/Julien-Minder).<br />
+Copyright © 2020 [Julien Minder](https://github.com/Julien-Minder).<br />
 This project is [ISC](https://github.com/Julien-Minder/Fresh-tomato-from-Belair/blob/master/LICENSE) licensed.
 
 ***
