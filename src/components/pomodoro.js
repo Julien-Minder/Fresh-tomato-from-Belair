@@ -8,6 +8,10 @@ import useTimer from "../core/hooks/use-timer";
 const Pomodoro = () => {
     const [{timer, running}, {setTimer, setRunning}] = useTimer(
         SESSION_DURATION,
+        false,
+        () => {
+            console.warn("timer is finished !");
+        },
     );
 
     /* const [timer, setTimer] = useState(SESSION_DURATION);
